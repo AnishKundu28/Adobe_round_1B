@@ -28,27 +28,6 @@ This project is an intelligent PDF analysis system that extracts, ranks, and sum
 
 ---
 
-## 📁 Project Structure
-
-Adobe/
-├── input/
-│ ├── config.json # Persona, job, and file names
-│ └── *.pdf # Input PDF files
-├── output/
-│ └── challenge1b_output.json # Final output
-├── src/
-│ ├── init.py
-│ ├── main.py # Main entrypoint
-│ ├── intelligence_system.py # Ranking and summarization logic
-│ └── pdf_parser.py # PDF structure extractor
-├── Dockerfile # Build instructions
-└── requirements.txt # Python dependencies
-
-yaml
-Copy
-Edit
-
----
 
 ## ⚙️ Setup & Usage
 
@@ -80,6 +59,8 @@ bash
 Copy
 Edit
 docker build -t doc-intel-challenge .
+
+
 ▶️ Step 3: Run the Analysis
 Linux/macOS:
 
