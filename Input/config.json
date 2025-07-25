@@ -1,0 +1,8 @@
+{
+  "persona": "Hiring Manager",
+  "job_to_be_done": "Review resumes to find a qualified software engineer with Python and cloud experience.",
+  "documents": [
+    "file02.pdf",
+    "sample_resume.pdf"
+  ]
+}

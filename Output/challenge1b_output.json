@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "input_documents": [
+            "file02.pdf",
+            "sample_resume.pdf"
+        ],
+        "persona": "Hiring Manager",
+        "job_to_be_done": "Review resumes to find a qualified software engineer with Python and cloud experience.",
+        "processing_timestamp": "2025-07-25T12:50:34Z"
+    },
+    "extracted_sections": [
+        {
+            "document": "file02.pdf",
+            "page_number": 1,
+            "section_title": "Foundation Level Extensions",
+            "importance_rank": 1
+        },
+        {
+            "document": "file02.pdf",
+            "page_number": 3,
+            "section_title": "Revision History",
+            "importance_rank": 2
+        },
+        {
+            "document": "file02.pdf",
+            "page_number": 4,
+            "section_title": "Table of Contents",
+            "importance_rank": 3
+        },
+        {
+            "document": "sample_resume.pdf",
+            "page_number": 1,
+            "section_title": "Career Objective",
+            "importance_rank": 4
+        },
+        {
+            "document": "sample_resume.pdf",
+            "page_number": 1,
+            "section_title": "Key Skills",
+            "importance_rank": 5
+        }
+    ],
+    "sub_section_analysis": [
+        {
+            "document": "file02.pdf",
+            "section_title": "Foundation Level Extensions",
+            "refined_text": " Version 1.0 International Software Testing Qualifications Board Copyright Notice  This document may be copied in its entirety, or extracts made, if the source is acknowledged. International  Overview  Software Testing Foundation Level Extension – Qualifications Board Copyright © International Software Testing Qualifications Board (hereinafter called ISTQB®). Version 2014  Page 2 of 12  May 31, 2014 © International Software Testing Qualifications Board Qualifications Board International  Overview  Software Testing Foundation Level Extension –",
+            "page_number": 1
+        },
+        {
+            "document": "file02.pdf",
+            "section_title": "Revision History",
+            "refined_text": " Version  Date  Remarks 0.1  18 JUNE 2013  Initial version 0.2  23 JULY 2013  WG reviewed and confirmed 0.3  6 NOV 2013  amended population and diagram 0.7  11 DEC 2013  Amended Business Outcomes and Chapters matching 0.8  20 DEC 2013  Working group updates on 0.7 1.0  31 MAY 2014  GA release for Agile Extension Version 2014  Page 3 of 12  May 31, 2014 © International Software Testing Qualifications Board .......................................................................................................................................... ........................................................................................................................................ ............................................................................ ............................................................... .....................................................................................................................  ............................................................................................................  ...................................................................................................................  ...................................................................................................................  ...................................................................................................  ...................................................................................................................... ......................................... .................................................................................................................  .................................................................................................................................... .......................................................................................................................................... .............................................................................................................................  ....................................................................................................... International  Overview  Software Testing Foundation Level Extension – Qualifications Board",
+            "page_number": 3
+        },
+        {
+            "document": "file02.pdf",
+            "section_title": "Table of Contents",
+            "refined_text": "Version 2014  Page 5 of 12  May 31, 2014 © International Software Testing Qualifications Board Qualifications Board International  Overview  Software Testing Foundation Level Extension – 1. Professionals who are relatively new to testing and are required to implement test approaches,  methods and techniques in their day to day job in Agile projects. These professionals include people who are in roles such as testers, test analysts, test engineers, test  consultants, test managers, user acceptance testers, and software developers.",
+            "page_number": 4
+        },
+        {
+            "document": "sample_resume.pdf",
+            "section_title": "Career Objective",
+            "refined_text": "(Tip: A career objective isn’t essential, but it’s useful if you don't have much experience and can  convey enthusiasm and motivation. Briefly summarise any work you have done, your strengths and  relevant expertise and state how you aim to apply this to your career goal. Adjust the statement to  reflect the role you are applying for.)",
+            "page_number": 1
+        },
+        {
+            "document": "sample_resume.pdf",
+            "section_title": "Key Skills",
+            "refined_text": "• Demonstrated organisation skills as a result handing all assignments in on time. (Tip: Include 5-9 key skills as bullet points that you like using and that are relevant to the role. When  applying for advertised roles, match to any criteria listed in the advertisement.",
+            "page_number": 1
+        }
+    ]
+}
