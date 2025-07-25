@@ -1,64 +1,70 @@
 # Adobe_round_1B
 
 
+# 📘 Persona-Driven Document Intelligence Analyst
 
-Persona-Driven Document Intelligence Analyst
-This project is an intelligent document analysis system built for the "Connect What Matters — For the User Who Matters" challenge. It processes a collection of PDF documents, understands a user's specific role (Persona) and goal (Job-to-be-Done), and then extracts, ranks, and summarizes the most relevant sections from the documents.
+**Challenge Track:** _Connect What Matters — For the User Who Matters (Adobe India Hackathon)_
 
-The entire system is containerized with Docker for easy, dependency-free execution and is designed to run completely offline, meeting all challenge constraints.
+This project is an intelligent PDF analysis system that extracts, ranks, and summarizes document sections based on a user’s **persona** and **job-to-be-done**. Built for Round 1B, it runs completely **offline** and is fully **containerized with Docker** for seamless execution.
 
-Features
-Semantic Section Ranking: Uses sentence-transformer models (all-MiniLM-L6-v2) to understand the meaning of document sections and rank them based on their relevance to the user's query.
+---
 
-Persona-Based Analysis: The analysis is tailored to the user's specific role and task, ensuring the extracted information is highly relevant.
+## 🚀 Features
 
-Extractive Summarization: Generates concise summaries of the most important sections to provide quick insights.
+- 🔍 **Semantic Section Ranking**  
+  Understands and ranks sections using the `all-MiniLM-L6-v2` transformer model.
 
-Intelligent PDF Parsing: Extracts structured content (headings and corresponding text) from PDFs.
+- 🧑‍💼 **Persona-Based Analysis**  
+  Adapts the analysis to the user's role and specific task.
 
-Offline & Containerized: Fully containerized with Docker, with all models pre-loaded to run without any internet connection.
+- ✂️ **Extractive Summarization**  
+  Summarizes relevant document sections for quick insights.
 
-Project Structure
-The project is organized as follows:
+- 📄 **PDF Parsing & Structure Extraction**  
+  Intelligent extraction of headings and content using PyMuPDF.
 
-/Adobe/
+- 🐳 **Fully Offline & Dockerized**  
+  No internet required; containerized for easy setup.
+
+---
+
+## 📁 Project Structure
+
+Adobe/
 ├── input/
-│   ├── config.json               # --- Configuration for persona, job, and documents
-│   └── (Place your PDFs here)    # --- All input PDF files go here
-│
+│ ├── config.json # Persona, job, and file names
+│ └── *.pdf # Input PDF files
 ├── output/
-│   └── challenge1b_output.json   # --- The final analysis result
-│
+│ └── challenge1b_output.json # Final output
 ├── src/
-│   ├── _init_.py
-│   ├── main.py                   # --- Main execution script
-│   ├── intelligence_system.py    # --- Core logic for ranking and summarization
-│   └── pdf_parser.py             # --- PDF content extraction logic
-│
-├── Dockerfile                    # --- Instructions to build the container
-│
-└── requirements.txt              # --- Python dependencies
-Setup and Usage
-Follow these steps to set up and run the document analyst.
+│ ├── init.py
+│ ├── main.py # Main entrypoint
+│ ├── intelligence_system.py # Ranking and summarization logic
+│ └── pdf_parser.py # PDF structure extractor
+├── Dockerfile # Build instructions
+└── requirements.txt # Python dependencies
 
-1. Prerequisites
-Make sure you have Docker installed and running on your system.
+yaml
+Copy
+Edit
 
-2. Configuration
-Place all the PDF documents you want to analyze directly inside the input/ folder.
+---
 
-Open the input/config.json file and edit it to define your use case:
+## ⚙️ Setup & Usage
 
-persona: Describe the user's role (e.g., "Investment Analyst").
+### 📌 Prerequisites
 
-job_to_be_done: Describe the specific task (e.g., "Analyze revenue trends and R&D investments").
+- Docker installed: [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)
 
-documents: Provide a list of the exact filenames of the PDFs you placed in the input folder.
+---
 
-Example config.json:
+### ✏️ Step 1: Prepare Input
 
-JSON
+1. Place PDF files inside the `input/` folder.
+2. Edit `input/config.json` to describe your use case.
 
+Example `config.json`:
+json
 {
   "persona": "Investment Analyst",
   "job_to_be_done": "Analyze revenue trends, R&D investments, and market positioning strategies from the latest annual reports.",
@@ -67,37 +73,30 @@ JSON
     "annual_report_company_b.pdf"
   ]
 }
-3. Build the Docker Image
-Open a terminal in the project's root directory (Adobe/) and run the following command to build the Docker image. This will download all dependencies and models.
+🛠️ Step 2: Build Docker Image
+In the Adobe/ folder:
 
-Bash
-
+bash
+Copy
+Edit
 docker build -t doc-intel-challenge .
-4. Run the Analysis
-Execute the following command to run the analysis. This command links your local input and output folders to the container.
+▶️ Step 3: Run the Analysis
+Linux/macOS:
 
-For Windows (PowerShell):
-
-PowerShell
-
-docker run --rm -v "${PWD}/input:/app/input" -v "${PWD}/output:/app/output" doc-intel-challenge
-For Linux and macOS:
-
-Bash
-
+bash
+Copy
+Edit
 docker run --rm -v "$(pwd)/input:/app/input" -v "$(pwd)/output:/app/output" doc-intel-challenge
-The script will start, process the documents, and save the results.
+Windows PowerShell:
 
-5. View the Results
-Once the script finishes, you can find the complete analysis in the output/challenge1b_output.json file.
+powershell
+Copy
+Edit
+docker run --rm -v "${PWD}/input:/app/input" -v "${PWD}/output:/app/output" doc-intel-challenge
+📄 Step 4: View Output
+Check the generated file:
 
-Technology Stack
-Language: Python 3.9
-
-Containerization: Docker
-
-NLP / Embeddings: sentence-transformers (all-MiniLM-L6-v2 model)
-
-PDF Processing: PyMuPDF
-
-Core Libraries: PyTorch, NLTK
+bash
+Copy
+Edit
+output/challenge1b_output.json
